@@ -9,5 +9,3 @@ VALUES('Douglas', 'Adams', 'Don''t Panic'),
        ('Lou', 'Holtz', 'Virtually nothing is impossible in this world if you just put your mind to it and maintain a positive attitude.');
 
 SELECT id, author_first_name, content FROM quotes;
-
---DROP data and rerun to fix duplicates
