@@ -27,4 +27,12 @@ SELECT * FROM employees WHERE (last_name LIKE ('%q%')) AND (last_name NOT LIKE (
 SELECT first_name, last_name, birth_date FROM employees WHERE month(birth_date) = 12 AND day(birth_date) = 25;
 
 # Find all employees hired in the 90s and born on Christmas — 362 rows.
+SELECT *
+FROM employees
+WHERE year(hire_date) BETWEEN 1990 AND 1999
+  AND month(birth_date) = 12
+  AND day(birth_date) = 25;
+
+# Change the query for employees hired in the 90s and born on Christmas such that the first result is the oldest employee who was hired last. It should be Khun Bernini.
+
 
