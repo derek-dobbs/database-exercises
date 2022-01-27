@@ -22,3 +22,9 @@ SELECT * FROM employees WHERE (last_name LIKE 'E%') OR (last_name LIKE '%E');
 SELECT * FROM employees WHERE (last_name LIKE 'E%') AND (last_name LIKE '%E');
 
 SELECT * FROM employees WHERE (last_name LIKE ('%q%')) AND (last_name NOT LIKE ('%qu%'));
+
+# Find all employees born on Christmas — 842 rows.
+SELECT first_name, last_name, birth_date FROM employees WHERE month(birth_date) = 12 AND day(birth_date) = 25;
+
+# Find all employees hired in the 90s and born on Christmas — 362 rows.
+
