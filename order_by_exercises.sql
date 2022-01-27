@@ -5,7 +5,7 @@ SELECT * FROM employees WHERE (first_name IN ('Irena')
     OR first_name IN ('Vidya')
     OR first_name IN('Maya'))
                           AND gender IN ('M')
-    ORDER BY last_name, first_name DESC;
+    ORDER BY last_name DESC, first_name DESC;
 
 SELECT * FROM employees WHERE last_name LIKE 'E%' ORDER BY emp_no DESC;
 
