@@ -14,7 +14,7 @@ USE codeup_test_db;
 DESCRIBE albums;
 
 ALTER TABLE albums
-ADD UNIQUE name_artist_combined (name, artist);
+ADD UNIQUE (name, artist);
 
 DESCRIBE albums;
 
