@@ -37,5 +37,23 @@ WHERE emp_no IN (
 
 # BONUS
 # 1. Find all the department names that currently have female managers.
+SELECT dept_name
+FROM departments
+WHERE dept_no IN (
+    SELECT dept_no
+    FROM dept_manager
+    WHERE to_date > CURDATE()
+      AND dept_manager.emp_no IN (
+        SELECT employees.emp_no
+        FROM employees
+        WHERE gender = 'F'
+    ));
 
 # 2. Find the first and last name of the employee with the highest salary.
+SELECT first_name, last_name
+FROM employees
+WHERE emp_no IN (
+    SELECT emp_no
+    FROM salaries
+    WHERE salary = (SELECT MAX(salary) FROM salaries)
+);
