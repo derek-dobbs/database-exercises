@@ -43,8 +43,8 @@ WHERE dept_no IN (
     SELECT dept_no
     FROM dept_manager
     WHERE to_date > CURDATE()
-      AND dept_manager.emp_no IN (
-        SELECT employees.emp_no
+      AND emp_no IN (
+        SELECT emp_no
         FROM employees
         WHERE gender = 'F'
     ));
